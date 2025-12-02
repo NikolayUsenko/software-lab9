@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\formula.png" />
     <None Remove="Images\p1.png" />
     <None Remove="Images\p2.png" />
     <None Remove="Images\p3.png" />
@@ -17,16 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\p1.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\p2.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\p3.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\p4.png">
+    <Resource Include="Images\formula.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

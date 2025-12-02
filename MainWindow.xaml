@@ -5,103 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:software_lab9"
         mc:Ignorable="d"
-        Title="Ответ: " Height="420" Width="466"
+        Title="Ответ: "
+        MinHeight="330"
+        MinWidth="450"
+        SizeToContent="WidthAndHeight"
         WindowStartupLocation="CenterScreen">
-    <StackPanel>
-        <RadioButton IsChecked="True" Margin="5" Name="Radio1">
-            <WrapPanel>
-                <Image Source="/Images/p1.png" Height="30"/>
-                <GroupBox Header="Parameters">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition Width="100"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Content="a" Grid.Column="0" Grid.Row="0"/>
-                        <TextBox Text="0,00" Grid.Column="1" Grid.Row="0"
-                                   MinWidth="70" Name="R1TextA"/>
-                        <Label Content="f" Grid.Column="0" Grid.Row="1"/>
-                        <ComboBox Grid.Column="1" Grid.Row="1" SelectedIndex="0"
-                                  Name="R1ComboF">
-                            <ComboBoxItem>4</ComboBoxItem>
-                            <ComboBoxItem>5</ComboBoxItem>
-                            <ComboBoxItem>6</ComboBoxItem>
-                            <ComboBoxItem>7</ComboBoxItem>
-                            <ComboBoxItem>8</ComboBoxItem>
-                            <ComboBoxItem>9</ComboBoxItem>
-                        </ComboBox>
-                    </Grid>
-                </GroupBox>
-            </WrapPanel>
-        </RadioButton>
-        <RadioButton Margin="5" Name="Radio2">
-            <StackPanel>
-                <Image Source="/Images/p2.png" Height="23"/>
-                <GroupBox Header="Parameters">
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="a"/>
-                        <TextBox Text="0,00" MinWidth="70" Name="R2TextA"/>
-                        <Label Content="b"/>
-                        <TextBox Text="0,00" MinWidth="70" Name="R2TextB"/>
-                        <Label Content="f"/>
-                        <ComboBox MinWidth="100" Name="R2ComboF"
-                                  SelectedIndex="0">
-                            <ComboBoxItem>10</ComboBoxItem>
-                            <ComboBoxItem>20</ComboBoxItem>
-                            <ComboBoxItem>30</ComboBoxItem>
-                            <ComboBoxItem>40</ComboBoxItem>
-                        </ComboBox>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-        </RadioButton>
-        <RadioButton Margin="5" Name="Radio3">
-            <StackPanel>
-                <Image Source="/Images/p3.png" Height="30"/>
-                <GroupBox Header="Parameters">
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="a"/>
-                        <TextBox Text="0,00" MinWidth="50" Name="R3TextA"/>
-                        <Label Content="b"/>
-                        <TextBox Text="0,00" MinWidth="50" Name="R3TextB"/>
-                        <Label Content="c"/>
-                        <ComboBox MinWidth="50" SelectedIndex="0" Name="R3ComboC">
-                            <ComboBoxItem>0</ComboBoxItem>
-                            <ComboBoxItem>1</ComboBoxItem>
-                        </ComboBox>
-                        <Label Content="d"/>
-                        <ComboBox MinWidth="70" SelectedIndex="0" Name="R3ComboD">
-                            <ComboBoxItem>-1</ComboBoxItem>
-                            <ComboBoxItem>0</ComboBoxItem>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Source="/Images/formula.png" Height="150" Width="450"
+               Grid.Row="0"/>
+        <GroupBox Header="Параметры" Grid.Row="1" HorizontalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
 
-                            <ComboBoxItem>1</ComboBoxItem>
-                        </ComboBox>
-                    </StackPanel>
-                </GroupBox>
-            </StackPanel>
-        </RadioButton>
-        <RadioButton Margin="5" Name="Radio4">
-            <WrapPanel>
-                <Image Source="/Images/p4.png" Height="60"/>
-                <Label Content="c" VerticalAlignment="Center"/>
-                <ComboBox MinWidth="70" VerticalAlignment="Center" Name="R4ComboC"
-                          SelectedIndex="0">
-                    <ComboBoxItem>0</ComboBoxItem>
-                    <ComboBoxItem>1</ComboBoxItem>
-                    <ComboBoxItem>2</ComboBoxItem>
+                <Label Content="x" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBox Text="0,00" Grid.Column="1" Grid.Row="0" Padding="5"
+                         Name="TextX" VerticalAlignment="Center"/>
+                <Label Content="y" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center"/>
+                <TextBox Text="0,00" Grid.Column="1" Grid.Row="1" Padding="5"
+                         Name="TextY" VerticalAlignment="Center"/>
+                <Label Content="N" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="3" Grid.Row="0" Padding="5"
+                          SelectedIndex="0" Name="ComboN" VerticalAlignment="Center">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
                 </ComboBox>
-                <Label Content="d" VerticalAlignment="Center"/>
-                <TextBox Text="0,00" Width="70"
-                         VerticalAlignment="Center" Name="R4TextD"/>
-                <Label Content="a" VerticalAlignment="Center"/>
-                <TextBox Text="0,00" Width="70"
-                         VerticalAlignment="Center" Name="R4TextA"/>
-            </WrapPanel>
-        </RadioButton>
-        <Button Content="Считать" Width="100" Click="Calc_CLick"/>
-    </StackPanel>
+                <Label Content="K" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="3" Grid.Row="1" Padding="5"
+                          SelectedIndex="0" Name="ComboK" VerticalAlignment="Center">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                </ComboBox>
+            </Grid>
+        </GroupBox>
+        <Button Content="Считать" MinWidth="100" MaxWidth="300" Margin="15" Grid.Row="2" Click="Button_Click"/>
+    </Grid>
 </Window>
